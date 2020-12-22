@@ -1,0 +1,41 @@
+.banner {
+    @media (min-width: 320px) and (max-width: 768px) {
+        @include flex;
+        min-width: $mobile;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-height: 150px;
+
+        .banner-container {
+            min-width: 300px;
+            height: 100%;
+        }
+        .banner__image {
+            width: 100%;
+        }
+    }
+}
+
+.banner {
+    @media (min-width: 768px) and (max-width: 1200px) {
+        @include flex;
+        min-width: $tablet;
+        min-height: 361px;
+        
+        .banner-container {
+            min-width: $tablet;
+            height: 100%;
+        }
+        .banner__image {
+            width: 100%;
+        }
+    }
+}
+
+.banner {
+    @media (min-width: 1200px) {
+        @include flex;
+        .banner-container { width: $desktop; }
+        .banner__image { width: 100%; }
+    }
+}
